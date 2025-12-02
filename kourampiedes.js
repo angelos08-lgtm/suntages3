@@ -13,38 +13,49 @@ fetch('partials/layout.html')
     requestAnimationFrame(() => {
       const main = document.getElementById('content');
       main.innerHTML = `
-        <section class="contact-info">
-          <h2>Στοιχεία Επικοινωνίας</h2>
-          <p>📍 Διεύθυνση: Λεωφόρος Παραδείσου 123, Αθήνα</p>
-          <p>📞 Τηλέφωνο: <a href="tel:+302101234567">210 123 4567</a></p>
-          <p>📧 Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        </section>
+  <article class="container" aria-labelledby="title">
+    <header>
+      <h1 id="titlearticle">Κουραμπιέδες</h1>
+      <p class="lead">Παραδοσιακή συνταγή για αφράτους κουραμπιέδες — ιδανικοί για γιορτές.</p>
+      <div class="meta">Προετοιμασία: ~30 λεπτά • Ψήσιμο: 20-25 λεπτά • Μερίδες: περίπου 30</div>
+    </header>
 
-        <section class="hours">
-          <h2>Ώρες Λειτουργίας</h2>
-          <ul>
-            <li>Δευτέρα - Παρασκευή: 09:00 - 17:00</li>
-            <li>Σάββατο: 10:00 - 14:00</li>
-            <li>Κυριακή: Κλειστά</li>
-          </ul>
-        </section>
+    <section class="section" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Υλικά</h2>
+      <ul class="ingredients">
+        <li>300 γρ. βούτυρο αγελάδας σε θερμοκρασία δωματίου</li>
+        <li>150 γρ. ζάχαρη άχνη (για την ζύμη) + επιπλέον για πασπάλισμα</li>
+        <li>1 αυγό (προαιρετικά μόνο ο κρόκος)</li>
+        <li>100 γρ. αμύγδαλα ψημένα και χοντροκομμένα</li>
+        <li>600–700 γρ. αλεύρι για όλες τις χρήσεις (περίπου, ανάλογα την υγρασία)</li>
+        <li>1 κουτ. γλυκού μπέικιν πάουντερ</li>
+        <li>1 κουτ. γλυκού εκχύλισμα βανίλιας ή 1 φακελάκι</li>
+        <li>1-2 κουτ. σούπας κονιάκ ή λικέρ (προαιρετικά, δίνει άρωμα)</li>
+        <li>μια πρέζα αλάτι</li>
+        <li>ζάχαρη άχνη για πασπάλισμα (γενναιόδωρα)</li>
+        <li>προαιρετικά λίγες σταγόνες ανθόνερο ή ροδόνερο</li>
+      </ul>
+    </section>
 
-        <section class="contact-form">
-          <h2>Φόρμα Επικοινωνίας</h2>
-          <form id="contactForm">
-            <label for="name">Όνομα:</label>
-            <input type="text" id="name" name="name" placeholder="Το όνομά σου" required>
+    <section class="section" aria-labelledby="method-heading">
+      <h2 id="method-heading">Εκτέλεση</h2>
+      <ol class="steps">
+        <li>Προθερμαίνεις τον φούρνο στους 170°C (αέρα) και στρώνεις τα ταψιά με λαδόκολλα.</li>
+        <li>Χτυπάς το βούτυρο με την ζάχαρη άχνη μέχρι να γίνει λασπώδες και αφράτο.</li>
+        <li>Προσθέτεις τον κρόκο (αν χρησιμοποιήσεις), τη βανίλια και το κονιάκ/ανθόνερο. Ανακατεύεις καλά.</li>
+        <li>Σε ένα μπολ κοσκινίζεις το αλεύρι με το μπέικιν και την πρέζα αλάτι. Ρίχνεις σταδιακά στο βούτυρο μέχρι να σχηματιστεί μαλακή ζύμη.</li>
+        <li>Προσθέτεις τα χοντροκομμένα αμύγδαλα και ζυμώνεις απαλά — η ζύμη δεν πρέπει να γίνει σκληρή.</li>
+        <li>Πλάθεις μικρές μπάλες ή σχήμα κουραμπιέ (μισοφέγγαρο) και τοποθετείς στο ταψί με απόσταση.</li>
+        <li>Ψήνεις 20–25 λεπτά μέχρι να πάρουν πολύ ελαφρύ χρυσαφί χρώμα (προσοχή να μην ροδίσουν πολύ).</li>
+        <li>Βγάζεις και αφήνεις ελαφρά να κρυώσουν (ζεστοί απορροφούν καλύτερα την άχνη). Πασπαλίζεις γενναιόδωρα με άχνη όταν είναι ακόμη χλιαροί.</li>
+      </ol>
+      <p class="note">Συμβουλή: Αποθηκεύονται σε καλά κλειστό δοχείο. Αν τους αφήσεις 1-2 μέρες, μαλακώνουν και γίνονται ακόμα πιο νόστιμοι.</p>
+    </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Το email σου" required>
-
-            <label for="message">Μήνυμα:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Γράψε το μήνυμά σου..." required></textarea>
-
-            <button type="submit">Αποστολή</button>
-          </form>
-          <p id="formStatus" class="status"></p>
-        </section>
+    <footer class="section">
+      <p class="note">Καλή επιτυχία — κι αν βαριέσαι, ζήτα από κάποιον να σε βοηθήσει στο πλάσιμο 😉</p>
+    </footer>
+  </article>
       `;
 
       // Προσθήκη λογικής για τη φόρμα
@@ -61,3 +72,4 @@ fetch('partials/layout.html')
       }
     });
   });
+
