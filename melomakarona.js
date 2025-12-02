@@ -56,19 +56,7 @@ fetch('partials/layout.html')
   </section>
 </article>
       `;
+    }); // requestAnimationFrame
+  }); // fetch then
 
-      // Προσθήκη λογικής για τη φόρμα
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-
-      if (form) {
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          status.textContent = "✅ Το μήνυμά σου στάλθηκε επιτυχώς!";
-          status.style.color = "green";
-          form.reset();
-        });
-      }
-    });
-  });
 
