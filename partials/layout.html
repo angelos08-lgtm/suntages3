@@ -13,13 +13,34 @@
   <button id="menuButton">☰ Μενού</button>
   </header>
 
-  <nav id="sideMenu">
-    <button id="closeMenu">×</button>
-    <ul>
-      <li><a href="home.html" class="nav-link">Αρχική</a></li>
-      <li><a href="contact.html" class="nav-link">Επικοινωνία</a></li>
-    </ul>
-  </nav>
+<nav id="sideMenu">
+  <button id="closeMenu">×</button>
+  <ul>
+    <li><a href="arxiki.html" class="nav-link">Αρχική</a></li>
+
+    <!-- ΚΑΤΗΓΟΡΙΑ ΓΛΥΚΑ -->
+    <li class="has-submenu">
+      <button class="submenu-toggle">Γλυκά </button>
+      <ul class="submenu">
+        <li><a href="kourampiedes.html">Κουραμπιέδες</a></li>
+        <li><a href="melomakarona.html">Μελομακάρονα</a></li>
+        <li><a href="diples.html">Δίπλες</a></li>
+      </ul>
+    </li>
+
+    <!-- ΚΑΤΗΓΟΡΙΑ ΦΑΓΗΤΑ -->
+    <li class="has-submenu">
+      <button class="submenu-toggle">Φαγητά </button>
+      <ul class="submenu">
+        <li><a href="galopoula.html">Γαλοπούλα Γεμιστή</a></li>
+        <li><a href="moussakas.html">Μουσακάς</a></li>
+        <li><a href="fasolada.html">Φασολάδα</a></li>
+        <li><a href="souvlakia.html">Σουβλάκια</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
 
 <main id="content"><!-- empty, εδώ θα μπαίνει content κάθε σελίδας --></main>
 
@@ -30,4 +51,5 @@
   <script src="partials/layout_script.js"></script>
 </body>
 </html>
+
 
