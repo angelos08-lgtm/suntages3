@@ -43,3 +43,6 @@ function initMenu() {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", initMenu);
+
