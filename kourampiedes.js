@@ -56,8 +56,19 @@ fetch('partials/layout.html')
       <p class="note">Καλή επιτυχία — κι αν βαριέσαι, ζήτα από κάποιον να σε βοηθήσει στο πλάσιμο 😉</p>
     </footer>
   </article>
+
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/1k2d2nhSapQ"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+
       `;
     }); // requestAnimationFrame
   }); // fetch then
+
 
 
