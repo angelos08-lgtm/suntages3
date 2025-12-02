@@ -28,4 +28,16 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+  // υπομενού toggles (delegation)
+  document.querySelectorAll(".submenu-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const submenu = btn.nextElementSibling;
+      if (!submenu) return;
+      submenu.classList.toggle("open");
+      btn.textContent = submenu.classList.contains("open")
+        ? btn.textContent.replace("▼", "▲") // αν έχει βελάκι
+        : btn.textContent.replace("▲", "▼");
+    });
+  });
+}
 
