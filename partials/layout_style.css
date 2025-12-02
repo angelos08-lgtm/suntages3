@@ -2,7 +2,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   background-color: #f4f4f4;
@@ -23,23 +23,19 @@ footer {
 }
 
 /* Header */
-#header {
-	position: relative;
-  background-color: #d47a22;
-  color: white;
+header {
+  background-color: #222;
+  color: #fff;
   text-align: center;
-  padding: 10px 0px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  line-height: 1;
-   margin: 0;
-    font-size: 13px; 
+  padding: 15px;
+  position: relative;
 }
 
 /* Κουμπί μενού */
 header button {
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 40px;
   background-color: #8b0606;
   color: #fff;
   border: none;
@@ -60,7 +56,7 @@ header button:hover {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333;
+  background-color: #333333e0;
   overflow-x: hidden;
   transition: width 0.4s ease, opacity 0.4s ease;
   padding-top: 60px;
@@ -80,7 +76,7 @@ header button:hover {
 }
 
 #sideMenu ul li {
-  margin: 20px 0;
+  margin: 65px 0;
   text-align: center;
 }
 
@@ -96,57 +92,14 @@ header button:hover {
 
 #closeMenu {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 43px;
+  right: 25px;
   background: none;
   border: none;
   font-size: 30px;
   color: white;
   cursor: pointer;
 }
-
-/* Κρυφό υπομενού */
-.submenu {
-  display: none;
-  margin-left: 15px;
-  padding-left: 10px;
-  border-left: 2px solid #fff5;
-}
-
-/* Κουμπί υπομενού */
-.has-submenu .submenu-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 0;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-}
-
-/* Hover */
-.has-submenu .submenu-toggle:hover {
-  opacity: 0.8;
-}
-
-/* Όταν ανοίγει το υπομενού */
-.submenu.open {
-  display: block;
-}
-
-/* --- Προσθήκη: Βελάκια μέσω CSS --- */
-.submenu-toggle::after {
-  content: " ▼";
-  float: right;        /* Προαιρετικό: βάζει το βελάκι δεξιά */
-}
-
-.submenu-toggle.open::after {
-  content: " ▲";
-}
-
-
-
 
 
 
