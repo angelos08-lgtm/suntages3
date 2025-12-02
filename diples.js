@@ -65,18 +65,23 @@ fetch('partials/layout.html')
 <div id="ingredientPreview"></div>
       `;
 
-      // Προσθήκη λογικής για τη φόρμα
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
 
-      if (form) {
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          status.textContent = "✅ Το μήνυμά σου στάλθηκε επιτυχώς!";
-          status.style.color = "green";
-          form.reset();
-        });
+const preview = document.getElementById("ingredientPreview");
+
+document.querySelectorAll(".ingredients li").forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const img = item.getAttribute("data-img");
+    preview.style.backgroundImage = `url(${img})`;  
+    preview.style.display = "block";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    preview.style.display = "none";
+  });
+});
+
       }
     });
   });
+
 
