@@ -57,18 +57,21 @@ fetch('partials/layout.html')
     </footer>
   </article>
 
-<iframe width="560" height="315"
-  src="https://www.youtube.com/embed/1k2d2nhSapQ"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/Na0ddfRW9zU" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 
 
       `;
     }); // requestAnimationFrame
   }); // fetch then
+
 
 
 
