@@ -46,9 +46,10 @@
 
 .video-wrapper iframe {
   display: block;          /* αποφυγή inline προβλημάτων */
-  max-width: 100%;         /* responsive */
-  height: auto;            /* αναλογικά ύψος */
+  width: 640px;  /* εδώ αλλάζεις εύκολα το πλάτος */
+  height: 360px; /* αυτός είναι ο υπολογισμένος ύψος για 16:9 */
 }
+
 
 
 
