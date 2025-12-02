@@ -2,7 +2,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   background-color: #f4f4f4;
@@ -24,13 +24,16 @@ footer {
 
 /* Header */
 header {
-  background-color: #222;
-  color: #fff;
+	position: relative;
+  background-color: #d47a22;
+  color: white;
   text-align: center;
-  padding: 15px;
-  position: relative;
+  padding: 0px 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+   margin: 0;
+    font-size: 13px; 
 }
-
 /* Κουμπί μενού */
 header button {
   position: absolute;
@@ -101,6 +104,45 @@ header button:hover {
   cursor: pointer;
 }
 
+/* Κρυφό υπομενού */
+.submenu {
+  display: none;
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: 2px solid #fff5;
+}
+
+/* Κουμπί υπομενού */
+.has-submenu .submenu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+/* Hover */
+.has-submenu .submenu-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Όταν ανοίγει το υπομενού */
+.submenu.open {
+  display: block;
+}
+
+/* --- Προσθήκη: Βελάκια μέσω CSS --- */
+.submenu-toggle::after {
+  content: " ▼";
+  float: right;        /* Προαιρετικό: βάζει το βελάκι δεξιά */
+}
+
+.submenu-toggle.open::after {
+  content: " ▲";
+}
 
 
 
