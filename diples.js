@@ -64,9 +64,28 @@ fetch('partials/layout.html')
 
 <div id="ingredientPreview"></div>
       `;
-      }
-    });
-  });
+    
+      // ==========================
+      //  IMAGE PREVIEW SCRIPT
+      // ==========================
+
+      const preview = document.getElementById("ingredientPreview");
+
+      document.querySelectorAll(".ingredients li").forEach(item => {
+        item.addEventListener("mouseenter", () => {
+          const img = item.getAttribute("data-img");
+          preview.style.backgroundImage = `url(${img})`;
+          preview.style.display = "block";
+        });
+
+        item.addEventListener("mouseleave", () => {
+          preview.style.display = "none";
+        });
+      });
+
+    }); // requestAnimationFrame
+  }); // fetch then
+
 
 
 
