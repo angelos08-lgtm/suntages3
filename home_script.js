@@ -142,3 +142,5 @@ function initSlider() {
 
   startAutoplay();
 }
+
+
