@@ -1,99 +1,35 @@
-/* ====== contact.css ====== */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+    :root{
+      --bg:#fffdf8;
+      --card:#ffffff;
+      --accent:#c55b5b;
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
+    }
 
-header {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h2 {
-  color: #222;
-  border-bottom: 2px solid #ffd54f;
-  padding-bottom: 5px;
-}
-
-.contact-info, .hours, .contact-form {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.contact-info a, .hours a {
-  color: #0078d4;
-  text-decoration: none;
-}
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  width: 95%;
-  max-width: 500px; /*δική μου προσθήκη*/
-  max-height: 400px; /*δική μου προσθήκη*/
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-button {
-  background-color: #0078d4;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #005fa3;
-}
-
-.status {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px;
-  margin-top: auto;
-}
-
-footer .back-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #ffd54f;
-  text-decoration: none;
-}
-footer .back-link:hover {
-  text-decoration: underline;
-}
+    .container{
+      max-width:760px;
+      width:100%;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      padding:28px;
+	  margin: 20px auto;
+    }
+    #titlearticle{ margin:0 0 8px; font-size:28px; color:var(--accent) }
+    p.lead{ margin:0 0 18px; color:var(--muted) }
+    .section{ margin-bottom:18px }
+    ul.ingredients{
+      list-style: disc;
+      padding-left:1.1rem;
+      margin:0;
+    }
+    ol.steps{
+      margin:0;
+      padding-left:1.1rem;
+    }
+    .note{ font-size:0.9rem; color:var(--muted); margin-top:10px }
+    .meta { font-size:0.9rem; color:var(--muted); margin-bottom:10px }
+    @media (max-width:520px){
+      .container{ padding:18px }
+      h1{ font-size:22px }
+    }
