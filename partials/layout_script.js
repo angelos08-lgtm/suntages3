@@ -28,16 +28,25 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-  // υπομενού toggles (delegation)
-  document.querySelectorAll(".submenu-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const submenu = btn.nextElementSibling;
-      if (!submenu) return;
-      submenu.classList.toggle("open");
-      btn.textContent = submenu.classList.contains("open")
-        ? btn.textContent.replace("▼", "▲") // αν έχει βελάκι
-        : btn.textContent.replace("▲", "▼");
-    });
+
+
+
+
+document.querySelectorAll(".submenu-toggle").forEach(btn => {
+  // αποθηκεύουμε το βασικό text του κουμπιού
+  const baseText = btn.textContent.replace(/▼|▲/g, "").trim(); // π.χ. "Γλυκά" ή "Φαγητά"
+
+  btn.addEventListener("click", () => {
+    const submenu = btn.nextElementSibling;
+    if (!submenu) return;
+
+    // toggle submenu
+    submenu.classList.toggle("open");
+
+    // μόνο βελάκι αλλάζει
+    btn.textContent = baseText + (submenu.classList.contains("open") ? " ▲" : " ▼");
   });
-}
+});
+
+
 
