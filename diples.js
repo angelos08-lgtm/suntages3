@@ -64,7 +64,9 @@ fetch('partials/layout.html')
 
 <div id="ingredientPreview"></div>
       `;
-
+      }
+    });
+  });
 
 const preview = document.getElementById("ingredientPreview");
 
@@ -80,8 +82,6 @@ document.querySelectorAll(".ingredients li").forEach(item => {
   });
 });
 
-      }
-    });
-  });
+
 
 
