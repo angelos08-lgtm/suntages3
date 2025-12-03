@@ -34,10 +34,8 @@
       h1{ font-size:22px }
     }
 
-#ingredientPreview {
+.ingredient-preview {
   position: fixed;
-  top: 120px;
-  right: 20px;
   width: 180px;
   height: 180px;
   background-size: contain;
@@ -46,4 +44,22 @@
   display: none;
   pointer-events: none;
   z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
 }
+
+/* Εμφάνιση με fade-in */
+.ingredient-preview.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Θέσεις για κάθε εικόνα */
+#eggPreview { top: 120px; right: 20px; }
+#saltPreview { top: 320px; right: 50px; }
+#sugarPreview { top: 520px; right: 20px; }
+#vinegarPreview { top: 720px; right: 50px; }
+#flourPreview { top: 120px; left: 20px; }
+#oilPreview { top: 320px; left: 50px; }
+#syrupPreview { top: 520px; left: 20px; }
+#nutsPreview { top: 720px; left: 50px; }
