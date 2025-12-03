@@ -55,8 +55,18 @@ fetch('partials/layout.html')
     <p class="note">Μπορείς να τα κάνεις ακόμη πιο αρωματικά προσθέτοντας λίγο μέλι και στη ζύμη.</p>
   </section>
 </article>
+
+     <div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/I2iYWTkHx5I?si=EvtFmwgReZiITbYp" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
       `;
     }); // requestAnimationFrame
   }); // fetch then
+
 
 
