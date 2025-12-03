@@ -105,52 +105,52 @@
       background: var(--accent);
     }
 
-    /* ===========================
-            STORY BLOCK
-       =========================== */
+/* ===========================
+      STORY BLOCK (clean)
+   =========================== */
 
-  .story-block {
-    margin-bottom: 20px;
-    background: var(--card);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-  }
-
-  .story-block h3 {
-    margin: 0 0 6px;
-    color: #c55b5b;
-  }
-
-  .story-block p {
-    margin: 0;
-    line-height: 1.6;
-    color: #6b6b6b;
-  }
-
-
-.story-toggle {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.1rem;
-  text-align: left;
-  background: #eee;
-  border: none;
+.story-block {
+  margin-bottom: 20px;
+  background: #fff;                /* κρατάμε το τελικό background */
+  padding: 20px;                   /* κρατάμε το μεγαλύτερο padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.2s;
+  transition: 0.15s;
 }
 
-.story-toggle:hover {
-  background: #ddd;
+.story-block:hover {
+  transform: translateY(-2px);
 }
+
+.story-block h3 {
+  margin: 0 0 6px;
+  color: #c55b5b;
+}
+
+.story-block p {
+  margin: 0;
+  line-height: 1.6;
+  color: #6b6b6b;
+}
+
+/* ===========================
+      EXTRA TEXT BLOCK
+   =========================== */
 
 .story-extra {
   display: none;
-  padding: 10px 12px;
-  background: #fafafa;
-  border-left: 3px solid #ccc;
-  border-radius: 4px;
-  margin-top: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  border-left: 4px solid #c44;
+  border-radius: 8px;
 }
+
+.story-extra.open {
+  display: block;
+}
+
+
+
 
