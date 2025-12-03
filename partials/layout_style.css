@@ -76,9 +76,7 @@ header button:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 95%;
+
 }
 
 
@@ -169,6 +167,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
