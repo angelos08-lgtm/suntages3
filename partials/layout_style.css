@@ -106,11 +106,20 @@ header button:hover {
 
 /* Κρυφό υπομενού */
 .submenu {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
   margin-left: 15px;
   padding-left: 10px;
   border-left: 2px solid #fff5;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
+
+.submenu.open {
+  max-height: 500px; /* αρκετό για να χωρέσει όλα τα li */
+  opacity: 1;
+}
+
 
 /* Κουμπί υπομενού */
 .has-submenu .submenu-toggle {
@@ -129,10 +138,6 @@ header button:hover {
   opacity: 0.8;
 }
 
-/* Όταν ανοίγει το υπομενού */
-.submenu.open {
-  display: block;
-}
 
 /* --- Προσθήκη: Βελάκια μέσω CSS --- */
 .submenu-toggle::after {
@@ -143,6 +148,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
