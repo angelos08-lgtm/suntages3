@@ -66,13 +66,13 @@ function initStoryBlocks() {
     block.addEventListener("click", () => {
       const targetId = block.getAttribute("data-target");
       const extra = document.getElementById(targetId);
+      if (!extra) return;
 
-      if (extra) {
-        extra.classList.toggle("open");
-      }
+      extra.classList.toggle("open");
     });
   });
 }
+
 
 
 
@@ -172,3 +172,4 @@ function initSlider() {
 
   startAutoplay();
 }
+
