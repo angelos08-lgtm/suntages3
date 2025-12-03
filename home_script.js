@@ -22,28 +22,34 @@ fetch('partials/layout.html')
       </div>
 
       <!-- STORIES -->
-<div class="story-block">
-  <button class="story-toggle">Κουραμπιέδες</button>
-  <div class="story-extra">
-    Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία και έγιναν σύμβολο των ελληνικών Χριστουγέννων.
-  </div>
+<div class="story-block" data-target="extra1">
+  <h3>Κουραμπιέδες</h3>
+  <p>Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία...</p>
 </div>
 
-<div class="story-block">
-  <button class="story-toggle">Μελομακάρονα</button>
-  <div class="story-extra">
-    Προέρχονται από τα αρχαία «μακαρωνία» και συνδέονται με τελετουργικές γιορτές.
-  </div>
-</div>
-
-<div class="story-block">
-  <button class="story-toggle">Δίπλες</button>
-  <div class="story-extra">
-    Σύμβολο χαράς και καλοτυχίας, παραδοσιακό γλυκό της Πελοποννήσου.
-  </div>
+<div id="extra1" class="story-extra">
+  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τους κουραμπιέδες.</p>
 </div>
 
 
+<div class="story-block" data-target="extra2">
+  <h3>Μελομακάρονα</h3>
+  <p>Προέρχονται από τα αρχαία «μακαρωνία»...</p>
+</div>
+
+<div id="extra2" class="story-extra">
+  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τα μελομακάρονα.</p>
+</div>
+
+
+<div class="story-block" data-target="extra3">
+  <h3>Δίπλες</h3>
+  <p>Σύμβολο χαράς και καλοτυχίας...</p>
+</div>
+
+<div id="extra3" class="story-extra">
+  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τις δίπλες.</p>
+</div>
     `;
 
     // Αρχικοποίηση slider
@@ -51,6 +57,16 @@ fetch('partials/layout.html')
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
 
+
+// -------------------- STORIES -------------------- //
+document.querySelectorAll(".story-block").forEach(block => {
+  block.addEventListener("click", () => {
+    const targetId = block.getAttribute("data-target");
+    const extra = document.getElementById(targetId);
+
+    extra.classList.toggle("open");
+  });
+});
 
 // -------------------- Slider JS -------------------- //
 function initSlider() {
@@ -152,11 +168,7 @@ function initSlider() {
 }
 
 
-document.querySelectorAll('.story-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const extra = btn.nextElementSibling;
-    extra.style.display = extra.style.display === "block" ? "none" : "block";
-  });
-});
+
+
 
 
