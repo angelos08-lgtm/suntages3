@@ -139,18 +139,21 @@
    =========================== */
 
 .story-extra {
-  display: none;
-  padding: 12px;
-  margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 12px;
+  margin-bottom: 0;
   background: #f7f7f7;
   border-left: 4px solid #c44;
   border-radius: 8px;
+  transition: max-height 0.35s ease, padding 0.35s ease, margin 0.35s ease;
 }
 
 .story-extra.open {
-  display: block;
+  max-height: 300px;   /* αρκετό για τα περισσότερα text */
+  padding: 12px;
+  margin-bottom: 15px;
 }
-
 
 
 
