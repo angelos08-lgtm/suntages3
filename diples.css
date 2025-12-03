@@ -63,3 +63,15 @@
 #oilPreview { top: 320px; left: 50px; }
 #syrupPreview { top: 520px; left: 20px; }
 #nutsPreview { top: 720px; left: 50px; }
+
+.video-wrapper {
+  display: flex;          /* flex container */
+  justify-content: center; /* κεντράρισμα οριζόντια */
+  margin: 20px 0;         /* λίγο κενό πάνω/κάτω */
+}
+
+.video-wrapper iframe {
+  display: block;          /* αποφυγή inline προβλημάτων */
+  width: 700px;  /* εδώ αλλάζεις εύκολα το πλάτος */
+  height: 400px; /* αυτός είναι ο υπολογισμένος ύψος για 16:9 */
+}
