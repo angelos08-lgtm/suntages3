@@ -62,7 +62,7 @@ fetch('partials/layout.html')
 
      <div class="video-wrapper">
   <iframe 
-    src="https://www.youtube.com/embed/1k2d2nhSapQ" 
+    src="https://youtu.be/3BM7hoGjQxc?si=CX2YI_CIwX3nkOXA" 
     title="YouTube video player" 
     frameborder="0" 
     allowfullscreen>
@@ -101,5 +101,6 @@ document.querySelectorAll(".ingredients li").forEach(item => {
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
 
