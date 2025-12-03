@@ -75,19 +75,21 @@ fetch('partials/layout.html')
         nutsPreview: "https://cdn.pixabay.com/photo/2017/01/11/18/56/walnuts-1976454_1280.jpg"
       };
 
-      document.querySelectorAll(".ingredients li").forEach(item => {
-        const previewId = item.getAttribute("data-preview");
-        const previewDiv = document.getElementById(previewId);
-        if (!previewDiv) return;
+document.querySelectorAll(".ingredients li").forEach(item => {
+  const previewId = item.getAttribute("data-preview");
+  const previewDiv = document.getElementById(previewId);
+  if (!previewDiv) return;
 
-        // Ρύθμιση εικόνας
-        previewDiv.style.backgroundImage = `url(${previews[previewId]})`;
+  // Ρύθμιση εικόνας
+  previewDiv.style.backgroundImage = `url(${previews[previewId]})`;
 
-        // Εμφάνιση / Απόκρυψη
-        item.addEventListener("mouseenter", () => { previewDiv.style.display = "block"; });
-        item.addEventListener("mouseleave", () => { previewDiv.style.display = "none"; });
-      });
+  // Εμφάνιση / Απόκρυψη με animation
+  item.addEventListener("mouseenter", () => { previewDiv.classList.add('show'); });
+  item.addEventListener("mouseleave", () => { previewDiv.classList.remove('show'); });
+});
+
 
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
