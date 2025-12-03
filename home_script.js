@@ -152,4 +152,11 @@ function initSlider() {
 }
 
 
+document.querySelectorAll('.story-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const extra = btn.nextElementSibling;
+    extra.style.display = extra.style.display === "block" ? "none" : "block";
+  });
+});
+
 
