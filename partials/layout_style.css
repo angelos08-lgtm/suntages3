@@ -104,6 +104,22 @@ header button:hover {
   cursor: pointer;
 }
 
+#sideMenu ul li.menu-bottom {
+  margin-top: auto;        /* σπρώχνει το link στο κάτω μέρος */
+  border-top: 1px solid #fff5; /* προαιρετικό, για διαχωρισμό */
+  padding-top: 10px;
+}
+
+#sideMenu ul li.menu-bottom a {
+  color: #ffeb3b;         /* ξεχωριστό χρώμα */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#sideMenu ul li.menu-bottom a:hover {
+  text-decoration: underline;
+}
+
 /* Κρυφό υπομενού */
 .submenu {
   max-height: 0;
@@ -148,6 +164,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
