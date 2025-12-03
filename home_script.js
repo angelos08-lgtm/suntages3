@@ -22,20 +22,28 @@ fetch('partials/layout.html')
       </div>
 
       <!-- STORIES -->
-      <div class="story-block">
-        <h3>Κουραμπιέδες</h3>
-        <p>Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία και έγιναν σύμβολο των ελληνικών Χριστουγέννων.</p>
-      </div>
+<div class="story-block">
+  <button class="story-toggle">Κουραμπιέδες</button>
+  <div class="story-extra">
+    Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία και έγιναν σύμβολο των ελληνικών Χριστουγέννων.
+  </div>
+</div>
 
-      <div class="story-block">
-        <h3>Μελομακάρονα</h3>
-        <p>Προέρχονται από τα αρχαία «μακαρωνία» και συνδέονται με τελετουργικές γιορτές.</p>
-      </div>
+<div class="story-block">
+  <button class="story-toggle">Μελομακάρονα</button>
+  <div class="story-extra">
+    Προέρχονται από τα αρχαία «μακαρωνία» και συνδέονται με τελετουργικές γιορτές.
+  </div>
+</div>
 
-      <div class="story-block">
-        <h3>Δίπλες</h3>
-        <p>Σύμβολο χαράς και καλοτυχίας, παραδοσιακό γλυκό της Πελοποννήσου.</p>
-      </div>
+<div class="story-block">
+  <button class="story-toggle">Δίπλες</button>
+  <div class="story-extra">
+    Σύμβολο χαράς και καλοτυχίας, παραδοσιακό γλυκό της Πελοποννήσου.
+  </div>
+</div>
+
+
     `;
 
     // Αρχικοποίηση slider
@@ -142,5 +150,6 @@ function initSlider() {
 
   startAutoplay();
 }
+
 
 
