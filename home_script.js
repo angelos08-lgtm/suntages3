@@ -22,41 +22,57 @@ fetch('partials/layout.html')
       </div>
 
       <!-- STORIES -->
-<div class="story-block" data-target="extra1">
-  <h3>Κουραμπιέδες</h3>
-  <p>Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία...</p>
-</div>
+      <div class="story-block" data-target="extra1">
+        <h3>Κουραμπιέδες</h3>
+        <p>Οι κουραμπιέδες έχουν ρίζες στη Μικρά Ασία...</p>
+      </div>
 
-<div id="extra1" class="story-extra">
-  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τους κουραμπιέδες.</p>
-</div>
+      <div id="extra1" class="story-extra">
+        <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τους κουραμπιέδες.</p>
+      </div>
 
+      <div class="story-block" data-target="extra2">
+        <h3>Μελομακάρονα</h3>
+        <p>Προέρχονται από τα αρχαία «μακαρωνία»...</p>
+      </div>
 
-<div class="story-block" data-target="extra2">
-  <h3>Μελομακάρονα</h3>
-  <p>Προέρχονται από τα αρχαία «μακαρωνία»...</p>
-</div>
+      <div id="extra2" class="story-extra">
+        <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τα μελομακάρονα.</p>
+      </div>
 
-<div id="extra2" class="story-extra">
-  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τα μελομακάρονα.</p>
-</div>
+      <div class="story-block" data-target="extra3">
+        <h3>Δίπλες</h3>
+        <p>Σύμβολο χαράς και καλοτυχίας...</p>
+      </div>
 
-
-<div class="story-block" data-target="extra3">
-  <h3>Δίπλες</h3>
-  <p>Σύμβολο χαράς και καλοτυχίας...</p>
-</div>
-
-<div id="extra3" class="story-extra">
-  <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τις δίπλες.</p>
-</div>
+      <div id="extra3" class="story-extra">
+        <p>Αυτό είναι το πλήρες επιπλέον κείμενο για τις δίπλες.</p>
+      </div>
     `;
 
-    // Αρχικοποίηση slider
+    // -------------------- Αρχικοποίηση STORIES -------------------- //
+    initStoryBlocks();
+
+    // -------------------- Αρχικοποίηση SLIDER -------------------- //
     initSlider();
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
 
+
+
+// -------------------- STORIES FUNCTION -------------------- //
+function initStoryBlocks() {
+  document.querySelectorAll(".story-block").forEach(block => {
+    block.addEventListener("click", () => {
+      const targetId = block.getAttribute("data-target");
+      const extra = document.getElementById(targetId);
+
+      if (extra) {
+        extra.classList.toggle("open");
+      }
+    });
+  });
+}
 
 
 
@@ -126,9 +142,11 @@ function initSlider() {
     startAutoplay();
   }
 
-  // Events
+  // Buttons
   nextBtn.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
   prevBtn.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+
+  // Pause on hover
   slider.addEventListener('mouseenter', stopAutoplay);
   slider.addEventListener('mouseleave', startAutoplay);
 
@@ -140,10 +158,6 @@ function initSlider() {
     startX = e.touches[0].clientX;
     isDragging = true;
     stopAutoplay();
-  });
-
-  slider.addEventListener('touchmove', e => {
-    if(!isDragging) return;
   });
 
   slider.addEventListener('touchend', e => {
@@ -158,18 +172,3 @@ function initSlider() {
 
   startAutoplay();
 }
-
-// -------------------- STORIES -------------------- //
-document.querySelectorAll(".story-block").forEach(block => {
-  block.addEventListener("click", () => {
-    const targetId = block.getAttribute("data-target");
-    const extra = document.getElementById(targetId);
-
-    extra.classList.toggle("open");
-  });
-});
-
-
-
-
-
