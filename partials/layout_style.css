@@ -76,7 +76,12 @@ header button:hover {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  display: flex;         /* Κάνει τη λίστα flex container */
+  flex-direction: column; /* Κάθετα τα li */
+  height: 100%;           /* Για να γεμίσει όλο το ύψος του side menu */
 }
+
 
 #sideMenu ul li {
   margin: 20px 0;
@@ -164,6 +169,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
