@@ -58,15 +58,7 @@ fetch('partials/layout.html')
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
 
 
-// -------------------- STORIES -------------------- //
-document.querySelectorAll(".story-block").forEach(block => {
-  block.addEventListener("click", () => {
-    const targetId = block.getAttribute("data-target");
-    const extra = document.getElementById(targetId);
 
-    extra.classList.toggle("open");
-  });
-});
 
 // -------------------- Slider JS -------------------- //
 function initSlider() {
@@ -167,6 +159,15 @@ function initSlider() {
   startAutoplay();
 }
 
+// -------------------- STORIES -------------------- //
+document.querySelectorAll(".story-block").forEach(block => {
+  block.addEventListener("click", () => {
+    const targetId = block.getAttribute("data-target");
+    const extra = document.getElementById(targetId);
+
+    extra.classList.toggle("open");
+  });
+});
 
 
 
