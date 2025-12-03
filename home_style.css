@@ -68,7 +68,7 @@ main {
   background: rgba(0,0,0,0.4);
   border: none;
   color: white;
-  padding: 10px 14px;
+  padding: 55px 5px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 8px;
@@ -181,3 +181,4 @@ main {
   .story-block p { font-size: 0.9em; }
   .slider, .story-slider { aspect-ratio: 4 / 3; }
 }
+
