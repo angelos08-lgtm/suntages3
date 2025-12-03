@@ -59,6 +59,15 @@ fetch('partials/layout.html')
 <div id="oilPreview" class="ingredient-preview"></div>
 <div id="syrupPreview" class="ingredient-preview"></div>
 <div id="nutsPreview" class="ingredient-preview"></div>
+
+     <div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/1k2d2nhSapQ" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
       `;
 
       // ==========================
@@ -92,4 +101,5 @@ document.querySelectorAll(".ingredients li").forEach(item => {
     }); // requestAnimationFrame
   })
   .catch(err => console.error('Σφάλμα φόρτωσης layout:', err));
+
 
