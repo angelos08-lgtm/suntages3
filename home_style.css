@@ -127,3 +127,30 @@
     line-height: 1.6;
     color: #6b6b6b;
   }
+
+
+.story-toggle {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  text-align: left;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.story-toggle:hover {
+  background: #ddd;
+}
+
+.story-extra {
+  display: none;
+  padding: 10px 12px;
+  background: #fafafa;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
