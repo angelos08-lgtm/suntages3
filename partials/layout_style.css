@@ -59,7 +59,7 @@ header button:hover {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333333e0;
+  background-color: #c55b5be0;
   overflow-x: hidden;
   transition: width 0.4s ease, opacity 0.4s ease;
   padding-top: 60px;
@@ -148,6 +148,7 @@ header button:hover {
 .submenu-toggle.open::after {
   content: " ▲";
 }
+
 
 
 
